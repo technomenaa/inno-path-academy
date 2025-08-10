@@ -7,46 +7,50 @@
 
 @layer base {
   :root {
-    /* Core Colors - Engineering Theme */
-    --background: 248 250 252;
-    --foreground: 215 28% 17%;
+    /* Core Colors - Modern Engineering Theme */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
+    --popover-foreground: 240 10% 3.9%;
 
-    /* Primary - Deep Engineering Blue */
-    --primary: 210 100% 50%;
+    /* Primary - Deep Purple/Indigo */
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 210 100% 45%;
+    --primary-hover: 262 83% 53%;
 
-    /* Secondary - Professional Teal */
-    --secondary: 180 84% 42%;
+    /* Secondary - Professional Emerald Green */
+    --secondary: 160 84% 39%;
     --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 180 84% 37%;
+    --secondary-hover: 160 84% 34%;
 
-    /* Success - Pass Green */
-    --success: 142 71% 45%;
+    /* Success - Fresh Green */
+    --success: 142 69% 58%;
     --success-foreground: 0 0% 98%;
 
-    /* Warning - Attention Orange */
-    --warning: 24 95% 53%;
+    /* Warning - Vibrant Orange */
+    --warning: 25 95% 53%;
     --warning-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Info - Sky Blue */
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 98%;
 
-    --accent: 210 40% 94%;
-    --accent-foreground: 215 28% 17%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 214 84% 56%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
 
     /* Design System Variables */
     --radius: 0.75rem;
@@ -56,30 +60,23 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(220 90% 55%));
-    --gradient-secondary: linear-gradient(135deg, hsl(180 84% 42%), hsl(190 80% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(220 90% 55%) 50%, hsl(180 84% 42%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(252 83% 63%));
+    --gradient-secondary: linear-gradient(135deg, hsl(160 84% 39%), hsl(150 84% 44%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(252 83% 63%) 50%, hsl(160 84% 39%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(240 4.8% 98%) 100%);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 262 83% 58%;
   }
 
   .dark {
@@ -157,7 +154,7 @@
 
   /* Card Styles */
   .card-elevated {
-    @apply bg-gradient-to-br from-white to-slate-50 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200/60;
+    @apply bg-gradient-to-br from-white to-slate-50/50 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200/60;
   }
   
   .card-interactive {
@@ -166,11 +163,11 @@
 
   /* Button Styles */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-blue-600 text-primary-foreground hover:from-primary-hover hover:to-blue-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+    @apply bg-gradient-to-r from-primary to-purple-600 text-primary-foreground hover:from-primary-hover hover:to-purple-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
   }
   
   .btn-secondary {
-    @apply bg-gradient-to-r from-secondary to-teal-500 text-secondary-foreground hover:from-secondary-hover hover:to-teal-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+    @apply bg-gradient-to-r from-secondary to-emerald-600 text-secondary-foreground hover:from-secondary-hover hover:to-emerald-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
   }
 
   /* Status Colors */
@@ -183,6 +180,6 @@
   }
   
   .status-info {
-    @apply bg-blue-50 text-blue-700 border-blue-200;
+    @apply bg-sky-50 text-sky-700 border-sky-200;
   }
 }
