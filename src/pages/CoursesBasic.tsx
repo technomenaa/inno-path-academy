@@ -1,38 +1,60 @@
 import { Header } from '@/components/Header';
 import { CourseCard } from '@/components/CourseCard';
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import concreteImage from "@/assets/concrete-course.jpg";
+import structuralImage from "@/assets/structural-analysis.jpg";
+import materialsImage from "@/assets/materials-engineering.jpg";
 
 const CoursesBasic = () => {
-  const basicCourses = [
+  const coursesLevel1 = [
     {
-      id: 'concrete-basics',
-      title: 'أساسيات الخرسانة',
-      description: 'تعلم أساسيات الخرسانة وخصائصها وطرق خلطها واختبارها',
-      image: '/src/assets/concrete-2.jpg',
-      duration: '4 أسابيع',
-      level: 'مبتدئ',
-      difficulty: 'مبتدئ' as const,
-      topics: ['خصائص الخرسانة', 'خلط الخرسانة', 'اختبار الخرسانة', 'تطبيقات عملية']
+      id: "concrete-1",
+      title: "خرسانة مسلحة 1",
+      description: "أساسيات الخرسانة المسلحة والتصميم الإنشائي",
+      level: "المستوى الأول",
+      image: concreteImage,
+      topics: [
+        "خصائص الخرسانة والحديد",
+        "نظريات التصميم",
+        "تصميم العناصر الأساسية",
+        "الكمرات والأعمدة",
+        "البلاطات"
+      ],
+      duration: "8 أسابيع",
+      difficulty: "متوسط" as const
     },
     {
-      id: 'structural-basics',
-      title: 'أساسيات التحليل الإنشائي',
-      description: 'مقدمة في التحليل الإنشائي وحساب القوى والعزوم',
-      image: '/src/assets/structural-2.jpg',
-      duration: '5 أسابيع',
-      level: 'مبتدئ',
-      difficulty: 'مبتدئ' as const,
-      topics: ['حساب القوى', 'العزوم', 'تحليل الهياكل', 'الأحمال']
+      id: "structural-1", 
+      title: "تحليل إنشائي 1",
+      description: "أساسيات التحليل الإنشائي للمنشآت",
+      level: "المستوى الأول",
+      image: structuralImage,
+      topics: [
+        "توازن القوى",
+        "تحليل الكمرات",
+        "العزوم والقوى القاطعة",
+        "التشوهات",
+        "طرق التحليل"
+      ],
+      duration: "10 أسابيع",
+      difficulty: "متوسط" as const
     },
     {
-      id: 'materials-basics',
-      title: 'أساسيات هندسة المواد',
-      description: 'دراسة خصائص المواد الإنشائية وتطبيقاتها',
-      image: '/src/assets/materials-2.jpg',
-      duration: '3 أسابيع',
-      level: 'مبتدئ',
-      difficulty: 'مبتدئ' as const,
-      topics: ['الصلب', 'الخرسانة', 'الخشب', 'المواد الحديثة']
+      id: "materials-1",
+      title: "هندسة المواد 1", 
+      description: "خصائص ومعالجة مواد البناء الهندسية",
+      level: "المستوى الأول",
+      image: materialsImage,
+      topics: [
+        "خصائص المواد",
+        "اختبارات المواد",
+        "الخرسانة والحديد",
+        "مواد العزل",
+        "مراقبة الجودة"
+      ],
+      duration: "6 أسابيع", 
+      difficulty: "متوسط" as const
     }
   ];
 
@@ -42,16 +64,19 @@ const CoursesBasic = () => {
       
       <main className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
+          <Badge className="mb-4 status-info">
+            المستوى الأول - المواد الأساسية
+          </Badge>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
             الدورات الحالية (ترميز 1)
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            دورات تأسيسية مجانية لبناء قاعدة معرفية قوية في الهندسة المدنية
+            اختبر معرفتك في المواد الأساسية وانتقل إلى المستوى المتقدم عند تحقيق 70% أو أكثر
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {basicCourses.map((course) => (
+          {coursesLevel1.map((course) => (
             <CourseCard key={course.id} {...course} />
           ))}
         </div>
