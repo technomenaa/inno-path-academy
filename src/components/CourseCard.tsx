@@ -14,6 +14,7 @@ interface CourseCardProps {
   duration: string;
   difficulty: "مبتدئ" | "متوسط" | "متقدم";
   completed?: boolean;
+  prerequisites?: string;
 }
 
 export const CourseCard = ({ 
@@ -25,7 +26,8 @@ export const CourseCard = ({
   topics, 
   duration, 
   difficulty,
-  completed = false 
+  completed = false,
+  prerequisites 
 }: CourseCardProps) => {
   const navigate = useNavigate();
 
@@ -88,6 +90,14 @@ export const CourseCard = ({
             {topics.length} موضوع
           </div>
         </div>
+        
+        {prerequisites && (
+          <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
+            <p className="text-xs text-amber-700 font-medium">
+              📋 {prerequisites}
+            </p>
+          </div>
+        )}
         
         <div className="space-y-2 mb-4">
           <h4 className="text-sm font-medium text-foreground">المواضيع الرئيسية:</h4>
