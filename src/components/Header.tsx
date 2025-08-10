@@ -25,6 +25,28 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-reverse space-x-4">
+            {/* قائمة الدورات */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <GraduationCap className="w-4 h-4 ml-2" />
+                  الدورات
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-48" align="start">
+                <DropdownMenuItem onClick={() => navigate('/courses/basic')}>
+                  <span>الدورات الحالية (ترميز 1)</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => navigate('/courses/advanced')}>
+                  <span>الدورات المتقدمة</span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => navigate('/register')}>
+                  <span>طلب التسجيل</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             {isAuthenticated ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
