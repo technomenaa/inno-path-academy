@@ -170,7 +170,7 @@
   }
   
   .btn-secondary {
-    @apply bg-gradient-to-r from-secondary to-orange-500 text-secondary-foreground hover:from-secondary-hover hover:to-orange-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+    @apply bg-gradient-to-r from-secondary to-teal-500 text-secondary-foreground hover:from-secondary-hover hover:to-teal-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
   }
 
   /* Status Colors */

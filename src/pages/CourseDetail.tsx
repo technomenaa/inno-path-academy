@@ -18,6 +18,9 @@ import {
 import concreteImage from "@/assets/concrete-course.jpg";
 import structuralImage from "@/assets/structural-analysis.jpg";
 import materialsImage from "@/assets/materials-engineering.jpg";
+import concrete2Image from "@/assets/concrete-2.jpg";
+import structural2Image from "@/assets/structural-2.jpg";
+import materials2Image from "@/assets/materials-2.jpg";
 
 const courseData = {
   "concrete-1": {
@@ -133,6 +136,135 @@ const courseData = {
     ],
     nextCourse: "هندسة المواد 2",
     prerequisites: "كيمياء عامة، فيزياء"
+  },
+  "concrete-2": {
+    title: "خرسانة مسلحة 2",
+    description: "تصميم المنشآت الخرسانية المتقدمة والتحليل الديناميكي للمباني الحديثة",
+    image: concrete2Image,
+    duration: "12 أسبوع",
+    difficulty: "متقدم",
+    students: "320",
+    rating: "4.9",
+    topics: [
+      {
+        title: "تصميم المنشآت عالية الارتفاع",
+        description: "تصميم الأبراج والمباني الشاهقة وفقاً للمعايير الدولية",
+        duration: "أسبوعان"
+      },
+      {
+        title: "التحليل الديناميكي والزلزالي",
+        description: "تحليل استجابة المنشآت للأحمال الديناميكية والزلازل",
+        duration: "ثلاثة أسابيع"
+      },
+      {
+        title: "الخرسانة مسبقة الصب والإجهاد",
+        description: "تصميم وتنفيذ العناصر مسبقة الصب ومسبقة الإجهاد",
+        duration: "أسبوعان"
+      },
+      {
+        title: "أنظمة الحماية الزلزالية",
+        description: "تصميم العوازل الزلزالية والمخمدات",
+        duration: "أسبوعان"
+      },
+      {
+        title: "تصميم الأساسات المتقدمة",
+        description: "الأساسات العميقة والخاصة للمشاريع الكبيرة",
+        duration: "أسبوعان"
+      },
+      {
+        title: "التصميم باستخدام الحاسوب",
+        description: "استخدام SAP2000 وETABS في التصميم",
+        duration: "أسبوع واحد"
+      }
+    ],
+    nextCourse: "تصميم المنشآت الخاصة",
+    prerequisites: "اجتياز خرسانة مسلحة 1 بنسبة 70% أو أكثر"
+  },
+  "structural-2": {
+    title: "تحليل إنشائي 2",
+    description: "التحليل المتقدم للمنشآت باستخدام الطرق الحاسوبية والنظريات الحديثة",
+    image: structural2Image,
+    duration: "14 أسبوع",
+    difficulty: "متقدم",
+    students: "285",
+    rating: "4.8",
+    topics: [
+      {
+        title: "طريقة العناصر المحدودة",
+        description: "الأسس النظرية والتطبيق العملي لطريقة FEM",
+        duration: "ثلاثة أسابيع"
+      },
+      {
+        title: "التحليل اللاخطي للمنشآت",
+        description: "تحليل السلوك اللاخطي للمواد والهندسة",
+        duration: "ثلاثة أسابيع"
+      },
+      {
+        title: "ديناميكا المنشآت",
+        description: "الاهتزازات الحرة والقسرية للمنشآت",
+        duration: "أسبوعان"
+      },
+      {
+        title: "تحليل الاستقرار",
+        description: "تحليل الانبعاج والاستقرار الجانبي",
+        duration: "أسبوعان"
+      },
+      {
+        title: "التحليل الزلزالي المتقدم",
+        description: "طرق التحليل الطيفي والزمني للزلازل",
+        duration: "ثلاثة أسابيع"
+      },
+      {
+        title: "برامج التحليل الإنشائي",
+        description: "إتقان SAP2000، ETABS، وRAM",
+        duration: "أسبوع واحد"
+      }
+    ],
+    nextCourse: "تحليل المنشآت المتقدمة",
+    prerequisites: "اجتياز تحليل إنشائي 1 بنسبة 70% أو أكثر"
+  },
+  "materials-2": {
+    title: "هندسة المواد 2",
+    description: "استكشاف المواد المتقدمة والتقنيات الذكية في صناعة البناء المستقبلية",
+    image: materials2Image,
+    duration: "10 أسابيع",
+    difficulty: "متقدم",
+    students: "195",
+    rating: "4.9",
+    topics: [
+      {
+        title: "المواد المركبة والنانوية",
+        description: "خصائص وتطبيقات المواد المركبة في البناء",
+        duration: "أسبوعان"
+      },
+      {
+        title: "الخرسانة عالية الأداء",
+        description: "تطوير وتطبيق الخرسانة عالية المقاومة",
+        duration: "أسبوعان"
+      },
+      {
+        title: "المواد الذكية في البناء",
+        description: "أنظمة المراقبة الذاتية والمواد التكيفية",
+        duration: "أسبوع واحد"
+      },
+      {
+        title: "تقنيات إعادة التدوير",
+        description: "استخدام المواد المعاد تدويرها في البناء",
+        duration: "أسبوع واحد"
+      },
+      {
+        title: "مواد العزل المتقدمة",
+        description: "تقنيات العزل الحراري والصوتي المتطورة",
+        duration: "أسبوعان"
+      },
+      {
+        title: "الذكاء الاصطناعي في المواد",
+        description: "تطبيق AI في تطوير واختبار المواد",
+        duration: "أسبوعان"
+      }
+    ],
+    nextCourse: "مواد البناء المستقبلية",
+    prerequisites: "اجتياز هندسة المواد 1 بنسبة 70% أو أكثر"
   }
 };
 
@@ -179,8 +311,8 @@ const CourseDetail = () => {
           
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <Badge className="mb-4 status-info">
-                المستوى الأول
+              <Badge className={`mb-4 ${courseId?.includes('-2') ? 'status-warning' : 'status-info'}`}>
+                {courseId?.includes('-2') ? 'المستوى الثاني' : 'المستوى الأول'}
               </Badge>
               <h1 className="heading-xl mb-4">{course.title}</h1>
               <p className="text-lg text-muted-foreground mb-6">
