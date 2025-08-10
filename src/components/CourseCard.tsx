@@ -15,6 +15,7 @@ interface CourseCardProps {
   difficulty: "مبتدئ" | "متوسط" | "متقدم";
   completed?: boolean;
   prerequisites?: string;
+  learningOutcomes?: string[];
 }
 
 export const CourseCard = ({ 
@@ -27,7 +28,8 @@ export const CourseCard = ({
   duration, 
   difficulty,
   completed = false,
-  prerequisites 
+  prerequisites,
+  learningOutcomes
 }: CourseCardProps) => {
   const navigate = useNavigate();
 
@@ -92,10 +94,28 @@ export const CourseCard = ({
         </div>
         
         {prerequisites && (
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
-            <p className="text-xs text-amber-700 font-medium">
+          <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-4">
+            <p className="text-xs text-orange-700 font-medium">
               📋 {prerequisites}
             </p>
+          </div>
+        )}
+        
+        {learningOutcomes && learningOutcomes.length > 0 && (
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+            <h4 className="text-sm font-medium text-blue-800 mb-2">🎯 ماذا ستتعلم:</h4>
+            <div className="space-y-1 max-h-32 overflow-y-auto">
+              {learningOutcomes.slice(0, 3).map((outcome, index) => (
+                <p key={index} className="text-xs text-blue-700">
+                  {outcome}
+                </p>
+              ))}
+              {learningOutcomes.length > 3 && (
+                <p className="text-xs text-blue-600 font-medium">
+                  +{learningOutcomes.length - 3} مهارات إضافية
+                </p>
+              )}
+            </div>
           </div>
         )}
         

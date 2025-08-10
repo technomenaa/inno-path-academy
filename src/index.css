@@ -31,8 +31,8 @@
     --success: 142 71% 45%;
     --success-foreground: 0 0% 98%;
 
-    /* Warning - Attention Amber */
-    --warning: 43 96% 56%;
+    /* Warning - Attention Orange */
+    --warning: 24 95% 53%;
     --warning-foreground: 0 0% 98%;
 
     --muted: 210 40% 96%;
@@ -179,7 +179,7 @@
   }
   
   .status-warning {
-    @apply bg-amber-50 text-amber-700 border-amber-200;
+    @apply bg-orange-50 text-orange-700 border-orange-200;
   }
   
   .status-info {
